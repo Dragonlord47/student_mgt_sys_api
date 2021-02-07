@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricSystemModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Staff__ID" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="Staff_Type" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="Firstname" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+    <Property Name="pictureURL" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BiometricSystemEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Staffs" EntityType="Self.Staff" />
+  </EntityContainer>
+</Schema>

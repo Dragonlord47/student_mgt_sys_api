@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricSystemModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BiometricSystem.dbo.Staff' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Staff__ID" Type="nchar" MaxLength="40" />
+    <Property Name="Staff_Type" Type="nchar" MaxLength="40" />
+    <Property Name="Surname" Type="nchar" MaxLength="40" />
+    <Property Name="Firstname" Type="nchar" MaxLength="40" />
+    <Property Name="pictureURL" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="BiometricSystemModel2StoreContainer">
+    <EntitySet Name="Staff" EntityType="Self.Staff" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Staff].[SN] AS [SN], 
+    [Staff].[Staff__ID] AS [Staff__ID], 
+    [Staff].[Staff_Type] AS [Staff_Type], 
+    [Staff].[Surname] AS [Surname], 
+    [Staff].[Firstname] AS [Firstname], 
+    [Staff].[pictureURL] AS [pictureURL]
+    FROM [dbo].[Staff] AS [Staff]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

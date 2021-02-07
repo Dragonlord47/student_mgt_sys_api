@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BiometricSystemModelStoreContainer" CdmEntityContainer="BiometricSystemEntities2">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="BiometricSystemModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Room_number" ColumnName="Room_number" />
+          <ScalarProperty Name="Hostel" ColumnName="Hostel" />
+          <ScalarProperty Name="Degree_Type" ColumnName="Degree_Type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="MatricNumber" ColumnName="MatricNumber" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="StudentLevel" ColumnName="StudentLevel" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneType" ColumnName="PhoneType" />
+          <ScalarProperty Name="PhoneModel" ColumnName="PhoneModel" />
+          <ScalarProperty Name="PhoneIMEI" ColumnName="PhoneIMEI" />
+          <ScalarProperty Name="LaptopType" ColumnName="LaptopType" />
+          <ScalarProperty Name="LaptopModel" ColumnName="LaptopModel" />
+          <ScalarProperty Name="LaptopSerialNumber" ColumnName="LaptopSerialNumber" />
+          <ScalarProperty Name="pictureURL" ColumnName="pictureURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

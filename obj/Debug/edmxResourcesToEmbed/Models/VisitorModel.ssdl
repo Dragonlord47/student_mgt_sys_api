@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricSystemModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Visitors">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="nchar" MaxLength="50" />
+    <Property Name="LASTNAME" Type="nchar" MaxLength="50" />
+    <Property Name="DATE_OF_VISIT" Type="nchar" MaxLength="50" />
+    <Property Name="WHOM_TO_SEE" Type="nchar" MaxLength="50" />
+    <Property Name="TIME_IN" Type="nchar" MaxLength="50" />
+    <Property Name="TIME_OUT" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="BiometricSystemModel1StoreContainer">
+    <EntitySet Name="Visitors" EntityType="Self.Visitors" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

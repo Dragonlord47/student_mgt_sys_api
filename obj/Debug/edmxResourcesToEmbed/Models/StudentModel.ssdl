@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="nchar" MaxLength="30" />
+    <Property Name="MatricNumber" Type="nchar" MaxLength="30" />
+    <Property Name="Surname" Type="nchar" MaxLength="30" />
+    <Property Name="Firstname" Type="nchar" MaxLength="30" />
+    <Property Name="Department" Type="nchar" MaxLength="30" />
+    <Property Name="StudentLevel" Type="nchar" MaxLength="30" />
+    <Property Name="PhoneNumber" Type="nchar" MaxLength="30" />
+    <Property Name="PhoneType" Type="nchar" MaxLength="30" />
+    <Property Name="PhoneModel" Type="nchar" MaxLength="30" />
+    <Property Name="PhoneIMEI" Type="nchar" MaxLength="100" />
+    <Property Name="LaptopType" Type="nchar" MaxLength="30" />
+    <Property Name="LaptopModel" Type="nchar" MaxLength="30" />
+    <Property Name="LaptopSerialNumber" Type="nchar" MaxLength="100" />
+    <Property Name="pictureURL" Type="nchar" MaxLength="500" />
+    <Property Name="status" Type="nchar" MaxLength="50" />
+    <Property Name="Degree_Type" Type="nchar" MaxLength="10" />
+    <Property Name="Hostel" Type="nchar" MaxLength="50" />
+    <Property Name="Room_number" Type="int" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="BiometricSystemModelStoreContainer">
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

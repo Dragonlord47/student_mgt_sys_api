@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BiometricSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="nchar" MaxLength="30" />
+          <Property Name="MatricNumber" Type="nchar" MaxLength="30" />
+          <Property Name="Surname" Type="nchar" MaxLength="30" />
+          <Property Name="Firstname" Type="nchar" MaxLength="30" />
+          <Property Name="Department" Type="nchar" MaxLength="30" />
+          <Property Name="StudentLevel" Type="nchar" MaxLength="30" />
+          <Property Name="PhoneNumber" Type="nchar" MaxLength="30" />
+          <Property Name="PhoneType" Type="nchar" MaxLength="30" />
+          <Property Name="PhoneModel" Type="nchar" MaxLength="30" />
+          <Property Name="PhoneIMEI" Type="nchar" MaxLength="100" />
+          <Property Name="LaptopType" Type="nchar" MaxLength="30" />
+          <Property Name="LaptopModel" Type="nchar" MaxLength="30" />
+          <Property Name="LaptopSerialNumber" Type="nchar" MaxLength="100" />
+          <Property Name="pictureURL" Type="nchar" MaxLength="500" />
+          <Property Name="status" Type="nchar" MaxLength="50" />
+          <Property Name="Degree_Type" Type="nchar" MaxLength="10" />
+          <Property Name="Hostel" Type="nchar" MaxLength="50" />
+          <Property Name="Room_number" Type="int" />
+          <Property Name="Gender" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="BiometricSystemModelStoreContainer">
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BiometricSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="SN" />
+          </Key>
+          <Property Name="SN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="MatricNumber" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="StudentLevel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneModel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneIMEI" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="LaptopType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="LaptopModel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="LaptopSerialNumber" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="pictureURL" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Degree_Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Hostel" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Room_number" Type="Int32" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="BiometricSystemEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="Self.Student" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BiometricSystemModelStoreContainer" CdmEntityContainer="BiometricSystemEntities2">
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="BiometricSystemModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Room_number" ColumnName="Room_number" />
+                <ScalarProperty Name="Hostel" ColumnName="Hostel" />
+                <ScalarProperty Name="Degree_Type" ColumnName="Degree_Type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="MatricNumber" ColumnName="MatricNumber" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="StudentLevel" ColumnName="StudentLevel" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneType" ColumnName="PhoneType" />
+                <ScalarProperty Name="PhoneModel" ColumnName="PhoneModel" />
+                <ScalarProperty Name="PhoneIMEI" ColumnName="PhoneIMEI" />
+                <ScalarProperty Name="LaptopType" ColumnName="LaptopType" />
+                <ScalarProperty Name="LaptopModel" ColumnName="LaptopModel" />
+                <ScalarProperty Name="LaptopSerialNumber" ColumnName="LaptopSerialNumber" />
+                <ScalarProperty Name="pictureURL" ColumnName="pictureURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

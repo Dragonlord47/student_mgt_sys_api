@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BiometricSystemModel2StoreContainer" CdmEntityContainer="BiometricSystemEntities4">
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="BiometricSystemModel2.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="pictureURL" ColumnName="pictureURL" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="Staff__ID" ColumnName="Staff__ID" />
+          <ScalarProperty Name="Staff_Type" ColumnName="Staff_Type" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

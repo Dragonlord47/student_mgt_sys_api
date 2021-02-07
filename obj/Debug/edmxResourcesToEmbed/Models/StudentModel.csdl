@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiometricSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="MatricNumber" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Firstname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="StudentLevel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneModel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PhoneIMEI" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="LaptopType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="LaptopModel" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="LaptopSerialNumber" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="pictureURL" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Degree_Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Hostel" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Room_number" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BiometricSystemEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+  </EntityContainer>
+</Schema>
